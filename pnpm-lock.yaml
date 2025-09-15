@@ -49,7 +49,7 @@ dependencies:
     version: 1.130.12(react-dom@19.1.1)(react@19.1.1)
   '@tanstack/react-router-devtools':
     specifier: ^1.130.13
-    version: 1.130.13(@tanstack/react-router@1.130.12)(@tanstack/router-core@1.130.12)(csstype@3.1.3)(react-dom@19.1.1)(react@19.1.1)(solid-js@1.9.7)(tiny-invariant@1.3.3)
+    version: 1.130.13(@tanstack/react-router@1.130.12)(@tanstack/router-core@1.131.44)(csstype@3.1.3)(react-dom@19.1.1)(react@19.1.1)(solid-js@1.9.9)(tiny-invariant@1.3.3)
   '@types/ws':
     specifier: ^8.18.1
     version: 8.18.1
@@ -69,8 +69,8 @@ dependencies:
     specifier: ^4.1.0
     version: 4.1.0
   lucide-react:
-    specifier: ^0.523.0
-    version: 0.523.0(react@19.1.1)
+    specifier: ^0.544.0
+    version: 0.544.0(react@19.1.1)
   next-themes:
     specifier: ^0.4.6
     version: 0.4.6(react-dom@19.1.1)(react@19.1.1)
@@ -482,6 +482,11 @@ packages:
 
   /@babel/runtime@7.28.2:
     resolution: {integrity: sha512-KHp2IflsnGywDjBWDkR9iEqiWSpc8GIi0lgTT3mOElT0PP1tG26P4tmFI2YvAdzgq9RGyoHZQEIEdZy6Ec5xCA==}
+    engines: {node: '>=6.9.0'}
+    dev: true
+
+  /@babel/runtime@7.28.4:
+    resolution: {integrity: sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==}
     engines: {node: '>=6.9.0'}
     dev: true
 
@@ -2536,6 +2541,11 @@ packages:
     resolution: {integrity: sha512-2VO1nNFDWojgZ7Uqv/OJfH6LphZQ1kE6l8sI3YBgSPtj3qN6I/rsoTHW9rGjwiDO8sQoDRXod2hpH6HMs5NDsw==}
     engines: {node: '>=12'}
 
+  /@tanstack/history@1.131.2:
+    resolution: {integrity: sha512-cs1WKawpXIe+vSTeiZUuSBy8JFjEuDgdMKZFRLKwQysKo8y2q6Q1HvS74Yw+m5IhOW1nTZooa6rlgdfXcgFAaw==}
+    engines: {node: '>=12'}
+    dev: false
+
   /@tanstack/query-core@5.83.1:
     resolution: {integrity: sha512-OG69LQgT7jSp+5pPuCfzltq/+7l2xoweggjme9vlbCPa/d7D7zaqv5vN/S82SzSYZ4EDLTxNO1PWrv49RAS64Q==}
     dev: false
@@ -2549,7 +2559,7 @@ packages:
       react: 19.1.1
     dev: false
 
-  /@tanstack/react-router-devtools@1.130.13(@tanstack/react-router@1.130.12)(@tanstack/router-core@1.130.12)(csstype@3.1.3)(react-dom@19.1.1)(react@19.1.1)(solid-js@1.9.7)(tiny-invariant@1.3.3):
+  /@tanstack/react-router-devtools@1.130.13(@tanstack/react-router@1.130.12)(@tanstack/router-core@1.131.44)(csstype@3.1.3)(react-dom@19.1.1)(react@19.1.1)(solid-js@1.9.9)(tiny-invariant@1.3.3):
     resolution: {integrity: sha512-cY+jYxEP4/WNDgFFlI5/1u2U9zY9zHmJDoNxCF3NiaSgtAIVHdCKRGvfG6oRl6EposNGtn+JJhQkMkfAyoN9lQ==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -2558,7 +2568,7 @@ packages:
       react-dom: '>=18.0.0 || >=19.0.0'
     dependencies:
       '@tanstack/react-router': 1.130.12(react-dom@19.1.1)(react@19.1.1)
-      '@tanstack/router-devtools-core': 1.130.13(@tanstack/router-core@1.130.12)(csstype@3.1.3)(solid-js@1.9.7)(tiny-invariant@1.3.3)
+      '@tanstack/router-devtools-core': 1.130.13(@tanstack/router-core@1.131.44)(csstype@3.1.3)(solid-js@1.9.9)(tiny-invariant@1.3.3)
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
     transitivePeerDependencies:
@@ -2607,7 +2617,20 @@ packages:
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
 
-  /@tanstack/router-devtools-core@1.130.13(@tanstack/router-core@1.130.12)(csstype@3.1.3)(solid-js@1.9.7)(tiny-invariant@1.3.3):
+  /@tanstack/router-core@1.131.44:
+    resolution: {integrity: sha512-Npi9xB3GSYZhRW8+gPhP6bEbyx0vNc8ZNwsi0JapdiFpIiszgRJ57pesy/rklruv46gYQjLVA5KDOsuaCT/urA==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@tanstack/history': 1.131.2
+      '@tanstack/store': 0.7.5
+      cookie-es: 1.2.2
+      seroval: 1.3.2
+      seroval-plugins: 1.3.3(seroval@1.3.2)
+      tiny-invariant: 1.3.3
+      tiny-warning: 1.0.3
+    dev: false
+
+  /@tanstack/router-devtools-core@1.130.13(@tanstack/router-core@1.131.44)(csstype@3.1.3)(solid-js@1.9.9)(tiny-invariant@1.3.3):
     resolution: {integrity: sha512-Fn8lwnc5zvyllaDQNY6qTSTtKZsEY4mlZlJVTmC2/vvY1susXUA0NQPmpBquJYQAHJGzqPX83h/yKb7hzBSH3g==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -2619,11 +2642,11 @@ packages:
       csstype:
         optional: true
     dependencies:
-      '@tanstack/router-core': 1.130.12
+      '@tanstack/router-core': 1.131.44
       clsx: 2.1.1
       csstype: 3.1.3
       goober: 2.1.16(csstype@3.1.3)
-      solid-js: 1.9.7
+      solid-js: 1.9.9
       tiny-invariant: 1.3.3
     dev: false
 
@@ -2701,6 +2724,10 @@ packages:
   /@tanstack/store@0.7.2:
     resolution: {integrity: sha512-RP80Z30BYiPX2Pyo0Nyw4s1SJFH2jyM6f9i3HfX4pA+gm5jsnYryscdq2aIQLnL4TaGuQMO+zXmN9nh1Qck+Pg==}
 
+  /@tanstack/store@0.7.5:
+    resolution: {integrity: sha512-qd/OjkjaFRKqKU4Yjipaen/EOB9MyEg6Wr9fW103RBPACf1ZcKhbhcu2S5mj5IgdPib6xFIgCUti/mKVkl+fRw==}
+    dev: false
+
   /@tanstack/virtual-file-routes@1.129.7:
     resolution: {integrity: sha512-a+MxoAXG+Sq94Jp67OtveKOp2vQq75AWdVI8DRt6w19B0NEqpfm784FTLbVp/qdR1wmxCOmKAvElGSIiBOx5OQ==}
     engines: {node: '>=12'}
@@ -2711,7 +2738,7 @@ packages:
     engines: {node: '>=18'}
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@babel/runtime': 7.28.2
+      '@babel/runtime': 7.28.4
       '@types/aria-query': 5.0.4
       aria-query: 5.3.0
       dom-accessibility-api: 0.5.16
@@ -5024,8 +5051,8 @@ packages:
       yallist: 3.1.1
     dev: true
 
-  /lucide-react@0.523.0(react@19.1.1):
-    resolution: {integrity: sha512-rUjQoy7egZT9XYVXBK1je9ckBnNp7qzRZOhLQx5RcEp2dCGlXo+mv6vf7Am4LimEcFBJIIZzSGfgTqc9QCrPSw==}
+  /lucide-react@0.544.0(react@19.1.1):
+    resolution: {integrity: sha512-t5tS44bqd825zAW45UQxpG2CvcC4urOwn2TrwSH8u+MjeE+1NnWl6QqeQ/6NdjMqdOygyiT9p3Ev0p1NJykxjw==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
     dependencies:
@@ -5769,6 +5796,15 @@ packages:
     dependencies:
       seroval: 1.3.2
 
+  /seroval-plugins@1.3.3(seroval@1.3.2):
+    resolution: {integrity: sha512-16OL3NnUBw8JG1jBLUoZJsLnQq0n5Ua6aHalhJK4fMQkz1lqR7Osz1sA30trBtd9VUDc2NgkuRCn8+/pBwqZ+w==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      seroval: ^1.0
+    dependencies:
+      seroval: 1.3.2
+    dev: false
+
   /seroval@1.3.2:
     resolution: {integrity: sha512-RbcPH1n5cfwKrru7v7+zrZvjLurgHhGyso3HTyGtRivGWgYjbOmGuivCQaORNELjNONoK35nj28EoWul9sb1zQ==}
     engines: {node: '>=10'}
@@ -5874,12 +5910,12 @@ packages:
       totalist: 3.0.1
     dev: true
 
-  /solid-js@1.9.7:
-    resolution: {integrity: sha512-/saTKi8iWEM233n5OSi1YHCCuh66ZIQ7aK2hsToPe4tqGm7qAejU1SwNuTPivbWAYq7SjuHVVYxxuZQNRbICiw==}
+  /solid-js@1.9.9:
+    resolution: {integrity: sha512-A0ZBPJQldAeGCTW0YRYJmt7RCeh5rbFfPZ2aOttgYnctHE7HgKeHCBB/PVc2P7eOfmNXqMFFFoYYdm3S4dcbkA==}
     dependencies:
       csstype: 3.1.3
       seroval: 1.3.2
-      seroval-plugins: 1.3.2(seroval@1.3.2)
+      seroval-plugins: 1.3.3(seroval@1.3.2)
     dev: false
 
   /sonner@2.0.7(react-dom@19.1.1)(react@19.1.1):
